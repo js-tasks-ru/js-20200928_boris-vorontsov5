@@ -6,7 +6,7 @@
  */
 export function sortStrings(arr, param = 'asc') {
   const res = arr.slice().map(str => str.normalize()).sort((str1, str2) => {
-    const compare = str1.localeCompare(str2, undefined, {caseFirst: 'upper'});
+    const compare = str1.localeCompare(str2, 'ru', {caseFirst: 'upper'});
 
     if (compare >= 0) {
       return 1;
