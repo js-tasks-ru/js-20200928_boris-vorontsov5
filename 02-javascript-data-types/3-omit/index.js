@@ -6,12 +6,10 @@
  */
 
 const pick = (obj, ...fields) => {
-  return {
-    ...fields.reduce((acc, field) => {
-      acc[field] = obj[field];
-      return acc;
-    }, {})
-  };
+  return fields.reduce((acc, field) => {
+    acc[field] = obj[field];
+    return acc;
+  }, {});
 };
 
 export const omit = (obj, ...fields) => {
